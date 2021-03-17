@@ -29,7 +29,7 @@ dei numeri da indovinare sono stati individuati.
             myNum = parseInt(prompt('Inserisci un numero: '));
 
             for (var x = 0; x < myArr.length; x++) {
-                if (myNum === myArr[x]) {
+                if (myNum == myArr[x]) {
                     myNumbers.push(myNum); // pusho nei numeri corretti
                 }
             }
