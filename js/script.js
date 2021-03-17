@@ -36,7 +36,7 @@ dei numeri da indovinare sono stati individuati.
 
         }
         alert('Hai indovinato ' + myNumbers.length  + ' numero/i! Numero/i corretto/i: ' + myNumbers);
-        console.log('Numero/i indovinato/i: ' + myNumbers)
+        console.log('Numero/i indovinato/i: ' + myNumbers);
     }, 2000);
 
 
