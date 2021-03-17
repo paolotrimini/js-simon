@@ -11,17 +11,21 @@ dei numeri da indovinare sono stati individuati.
     var myArr = [];
     var myNumbers = [];
 
-// Creo array di 5 numeri rnd
+    // Creo array di 5 valori
 
-    for (var i = 0; i < 5; i++) {
+    while(myArr.length < 5) {
         var rndNum = getRnd(1, 100);
-        myArr.push(rndNum);
+
+        if (!myArr.includes(rndNum)) {
+            myArr.push(rndNum);
+        }
     }
-    console.log('Numeri casuali iniziali: ' + myArr);
-    alert('Numeri casuali iniziali: ' + myArr);
+
+    console.log('Numeri rnd creati: ' + myArr);
+    alert('Numeri rnd creati: ' + myArr);
 
 
-    // Timer 30 secondi
+    // Inserisco 5 numeri tramite Prompt (dopo 30 secondi)
 
     setTimeout(function() {
 
@@ -30,13 +34,13 @@ dei numeri da indovinare sono stati individuati.
 
             for (var x = 0; x < myArr.length; x++) {
                 if (myNum == myArr[x]) {
-                    myNumbers.push(myNum); // pusho nei numeri corretti
+                    myNumbers.push(myNum); // pusho nei "numeri corretti"
                 }
             }
 
         }
-        alert('Hai indovinato ' + myNumbers.length  + ' numero/i! Numero/i corretto/i: ' + myNumbers);
-        console.log('Numero/i indovinato/i: ' + myNumbers);
+        alert('Hai indovinato ' + myNumbers.length  + ' numeri! Numeri corretti: ' + myNumbers);
+        console.log('Numeri indovinati: ' + myNumbers);
     }, 2000);
 
 
