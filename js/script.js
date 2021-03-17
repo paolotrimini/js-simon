@@ -11,6 +11,7 @@ var myArr = [];
 
 
 // array di 5 numeri rnd
+
 while (myArr.length < 5) {
 
     var rndNum = getRnd(1, 100);
@@ -25,17 +26,16 @@ while (myArr.length < 5) {
 alert('Numeri casuali: ' + myArr);
 
 
+// timer di 30 sec
 
-
-    // timer di 30 sec
-   /* function insertNumbers() {
+    function insertNumbers() {
         var myNumbers = parseInt(prompt('inserisci i numeri: '));
     }
 
     function init() {
         setTimeout(insertNumbers, 3 * 1000); // 3 sec ( poi mettere 30 secondi)
     }
-    init();*/
+    init();
 
 
 
