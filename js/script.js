@@ -8,57 +8,46 @@ dei numeri da indovinare sono stati individuati.
 
 
 
+
     var myArr = [];
+    var myNumbers = [];
 
-    // array di 5 numeri rnd
+// Creo array di 5 numeri rnd
 
-    while(myArr.length < 5) {
-
+    for (var i = 0; i < 5; i++) {
         var rndNum = getRnd(1, 100);
-        if (!myArr.includes(rndNum)) { // se rnd non si ripete
-            myArr.push(rndNum);        // lo pusho nell'array
-        }
+        myArr.push(rndNum);
     }
     console.log('Numeri casuali iniziali: ' + myArr);
-    alert('Numeri casuali: ' + myArr);
-    // fin qui OK!
+    alert('Numeri casuali iniziali: ' + myArr);
 
 
-    // inserisco 5 numeri (dopo timer di 30 sec)
+    // Timer 30 secondi
 
-    function insertNumbers() {
-        var myNumbers = [];
+    setTimeout(function() {
 
-        while (myNumbers.length < 5) {
-            var myNum = parseInt(prompt('inserisci un numero: '));
+        for (var i = 0; i < 5; i++) {
+            myNum = parseInt(prompt('Inserisci un numero: '));
 
-            if(!myNumbers.includes(myNum)){
-                myNumbers.push(myNum);
-            } else {
-                alert('numero già inserito!');
+            for (var x = 0; x < myArr.length; x++) {
+                if (myNum === myArr[x]) {
+                    myNumbers.push(myNum); // pusho nei numeri corretti
+                }
             }
 
         }
-        console.log('Numeri inseriti: ' + myNumbers);
-    }
-
-    // Timer 30 secondi
-    function init() {
-        setTimeout(insertNumbers, 1000); // 1 sec ( poi mettere 30 secondi)
-    }
-    init();
+        alert('Hai indovinato ' + myNumbers.length  + ' numero/i! Numero/i corretto/i: ' + myNumbers);
+        console.log('Numero/i indovinato/i: ' + myNumbers)
+    }, 2000);
 
 
 
 
+// FUNZIONI
 
-
-    // FUNZIONI
-
-    function getRnd(min, max) {
-        var minRnd = min;
-        var maxRnd= max - minRnd + 1;
-        var rnd = Math.floor(Math.random() * maxRnd) +minRnd;
-        return rnd;
-    }
-
+function getRnd(min, max) {
+    var minRnd = min;
+    var maxRnd= max - minRnd + 1;
+    var rnd = Math.floor(Math.random() * maxRnd) +minRnd;
+    return rnd;
+}
