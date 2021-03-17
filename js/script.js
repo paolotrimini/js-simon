@@ -8,7 +8,6 @@ dei numeri da indovinare sono stati individuati.
 
 
 
-
     var myArr = [];
     var myNumbers = [];
 
