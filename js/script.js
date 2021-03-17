@@ -27,15 +27,21 @@ alert('Numeri casuali: ' + myArr);
 
 
 // timer di 30 sec
+    // chiedi 5 numeri
 
-    function insertNumbers() {
-        var myNumbers = parseInt(prompt('inserisci i numeri: '));
-    }
+        for(i=0; i<myArr.length; i++) {
 
-    function init() {
-        setTimeout(insertNumbers, 3 * 1000); // 3 sec ( poi mettere 30 secondi)
-    }
-    init();
+            function insertNumbers() {
+                var myNumbers = parseInt(prompt('inserisci i numeri: ')); // x 5
+            }
+
+            function init() {
+                setTimeout(insertNumbers, 3 * 1000); // 3 sec ( poi mettere 30 secondi)
+            }
+            init();
+        }
+
+
 
 
 
