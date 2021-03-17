@@ -7,40 +7,40 @@ dei numeri da indovinare sono stati individuati.
 */
 
 
+
 var myArr = [];
 
-
-// array di 5 numeri rnd
-
-while (myArr.length < 5) {
+while(myArr.length < 5) {
 
     var rndNum = getRnd(1, 100);
-
-    if (myArr.includes(rndNum)) {
-        console.log('Numero già inserito');
-    } else {
-        myArr.push(rndNum);
+    if (!myArr.includes(rndNum)) { // se rnd non si ripete
+        myArr.push(rndNum);        // lo pusho nell'array
     }
 }
-//console.log('Numeri casuali: ' + myArr);
-alert('Numeri casuali: ' + myArr);
+alert('Numeri rnd creati: ' + myArr);
+
+// richiedo input utente
 
 
-// timer di 30 sec
-    // chiedi 5 numeri
+setTimeout (function() {
+    var myNumbers = [];
+    var rightNumbers = [];
+    while(myNumbers.length < 5) {
 
-        for(var i=0; i<myArr.length; i++) {
+        var insertNumber = prompt('Inserisci un numero: ');
+        if(!myNumbers.includes(insertNumber)){
+            myNumbers.push(insertNumber);
 
-            function insertNumbers() {
-                var myNumbers = parseInt(prompt('inserisci i numeri: ')); // x 5
+            if (!myArr.includes(insertNumber)){
+
+                rightNumbers.push(insertNumber);
             }
-
-            function init() {
-                setTimeout(insertNumbers, 3 * 1000); // 3 sec ( poi mettere 30 secondi)
-            }
-            init();
         }
+    }
+    console.log(myNumbers, rightNumbers);
+}, 3000); // cambiare: 30 secondi
 
+console.log(myArr);
 
 
 
@@ -55,5 +55,5 @@ function getRnd(min, max) {
     var rnd = Math.floor(Math.random() * maxRnd) +minRnd;
     return rnd;
 }
-
+//console.log(getRnd(1, 10));
 
