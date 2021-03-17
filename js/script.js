@@ -7,6 +7,7 @@ dei numeri da indovinare sono stati individuati.
 */
 
 
+// creo array numeri rnd
 
 var myArr = [];
 
@@ -19,8 +20,7 @@ while(myArr.length < 5) {
 }
 alert('Numeri rnd creati: ' + myArr);
 
-// richiedo input utente
-
+// inserimento 5 numeri (dopo 30 secondi)
 
 setTimeout (function() {
     var myNumbers = [];
