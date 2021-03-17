@@ -26,7 +26,7 @@ dei numeri da indovinare sono stati individuati.
     setTimeout(function() {
 
         for (var i = 0; i < 5; i++) {
-            myNum = parseInt(prompt('Inserisci un numero: '));
+            var myNum = parseInt(prompt('Inserisci un numero: '));
 
             for (var x = 0; x < myArr.length; x++) {
                 if (myNum == myArr[x]) {
