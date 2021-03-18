@@ -6,7 +6,7 @@ tramite il prompt(). Dopo che sono stati inseriti i 5 numeri, il software dice q
 dei numeri da indovinare sono stati individuati.
 */
 
-
+function simonSays () {
 
     var myArr = [];
     var myNumbers = [];
@@ -37,7 +37,6 @@ dei numeri da indovinare sono stati individuati.
                     myNumbers.push(myNum); // pusho nei "numeri corretti"
                 }
             }
-
         }
         alert('Hai indovinato ' + myNumbers.length  + ' numeri! Numeri corretti: ' + myNumbers);
         console.log('Numeri indovinati: ' + myNumbers);
@@ -45,6 +44,9 @@ dei numeri da indovinare sono stati individuati.
 
 
 
+} // fine funzione simonSays
+
+simonSays();
 
 // FUNZIONI
 
